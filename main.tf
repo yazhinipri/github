@@ -34,4 +34,4 @@ cluster = google_container_cluster.primary.name
 
 node_count = 1
 
-}   
+}

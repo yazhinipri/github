@@ -1,35 +1,18 @@
 steps:
-
- #step 1 init
-
+#step 1 init
 - name: 'hashicorp/terraform:1.0.0'
-
-args: ['init',
-
-'-backend-config=project=potent-galaxy-321008',
-
-'-backend-config=bucketpotent-galaxy-321008-tfstate']
-
-env:
-
-- "TF_VAR_project-name=potent-galaxy-321008"
-
- #step 2 plan
-
+  args: ['init',
+  '-backend-config=project=mesmerizing-bee-324807',
+  '-backend-config=bucketmesmerizing-bee-324807-tfstate']
+  env:
+  - "TF_VAR_project-name=mesmerizing-bee-324807"
+#step 2 plan
 - name: 'hashicorp/terraform:1.0.0'
-
-args: ['plan']
-
-env:
-
-- "TF_VAR_project-name=potent-galaxy-321008"
-
- #step 3 apply
-
+  args: ['plan']
+  env:
+  - "TF_VAR_project-name=mesmerizing-bee-324807"
+#step 3 apply
 - name: 'hashicorp/terraform:1.0.0'
-
-args: ['apply', '-auto-approve']
-
-env:
-
-- "TF_VAR_project-name=potent-galaxy-321008"
+  args: ['apply', '-auto-approve']
+  env:
+  - "TF_VAR_project-name=mesmerizing-bee-324807"
